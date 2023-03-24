@@ -36,8 +36,12 @@ export default <HardhatUserConfig>{
     ],
   },
   namedAccounts: {
-    deployer: 0,
-    signer: 1,
+    admin: {
+      default: 0,
+      "mumbai": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5",
+      "polygon": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5",
+      "goerli": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5"
+    }
   },
   networks: {
     localhost: {

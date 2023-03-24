@@ -276,23 +276,6 @@ function decreaseAllowance(address spender, uint256 subtractedValue) external no
 |---|---|---|
 | _0 | bool | undefined |
 
-### forceMint
-
-```solidity
-function forceMint(address to, uint256 amount) external nonpayable
-```
-
-
-
-
-
-#### Parameters
-
-| Name | Type | Description |
-|---|---|---|
-| to | address | undefined |
-| amount | uint256 | undefined |
-
 ### getRoleAdmin
 
 ```solidity
@@ -314,6 +297,51 @@ function getRoleAdmin(bytes32 role) external view returns (bytes32)
 | Name | Type | Description |
 |---|---|---|
 | _0 | bytes32 | undefined |
+
+### getRoleMember
+
+```solidity
+function getRoleMember(bytes32 role, uint256 index) external view returns (address)
+```
+
+
+
+*Returns one of the accounts that have `role`. `index` must be a value between 0 and {getRoleMemberCount}, non-inclusive. Role bearers are not sorted in any particular way, and their ordering may change at any point. WARNING: When using {getRoleMember} and {getRoleMemberCount}, make sure you perform all queries on the same block. See the following https://forum.openzeppelin.com/t/iterating-over-elements-on-enumerableset-in-openzeppelin-contracts/2296[forum post] for more information.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+| index | uint256 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | address | undefined |
+
+### getRoleMemberCount
+
+```solidity
+function getRoleMemberCount(bytes32 role) external view returns (uint256)
+```
+
+
+
+*Returns the number of accounts that have `role`. Can be used together with {getRoleMember} to enumerate all bearers of a role.*
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| role | bytes32 | undefined |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | uint256 | undefined |
 
 ### grantRole
 
@@ -381,13 +409,18 @@ function increaseAllowance(address spender, uint256 addedValue) external nonpaya
 ### initialize
 
 ```solidity
-function initialize() external nonpayable
+function initialize(address admin) external nonpayable
 ```
 
 
 
 
 
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| admin | address | undefined |
 
 ### mint
 
