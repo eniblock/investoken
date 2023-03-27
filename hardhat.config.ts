@@ -18,6 +18,8 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
   }
 });
 
+const default_mnemonic = "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol";
+
 const defaultNetwork = "hardhat";
 
 export default <HardhatUserConfig>{
@@ -47,42 +49,42 @@ export default <HardhatUserConfig>{
     localhost: {
         url: "http://localhost:8545",
         accounts: {
-            mnemonic: process.env.MNEMONIC,
+          mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     hardhat: {
         accounts: {
-          mnemonic: process.env.MNEMONIC,
+          mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     mainnet: {
         url: "https://mainnet.infura.io/v3/",
         accounts: {
-          mnemonic: process.env.MNEMONIC,
+          mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     goerli: {
         url: "https://goerli.infura.io/v3/",
         accounts: {
-          mnemonic: process.env.MNEMONIC,
+          mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     polygon: {
         url: "https://polygon-rpc.com",
         accounts: {
-          mnemonic: process.env.MNEMONIC,
+          mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     mumbai: {
         url: "https://rpc-mumbai.maticvigil.com",
         accounts: {
-          mnemonic: process.env.MNEMONIC,
+          mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     matic: {
         url: "https://rpc-mainnet.maticvigil.com/",
         accounts: {
-          mnemonic: process.env.MNEMONIC,
+          mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
 },
