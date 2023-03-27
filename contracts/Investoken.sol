@@ -121,11 +121,7 @@ contract Investoken is
         address from,
         address to,
         uint256 amount
-    )
-        internal
-        override(ERC20Upgradeable, ERC20SnapshotUpgradeable)
-        whenNotPaused
-    {
+    ) internal override(ERC20Upgradeable, ERC20SnapshotUpgradeable) whenNotPaused {
         super._beforeTokenTransfer(from, to, amount);
     }
 
@@ -134,7 +130,5 @@ contract Investoken is
      *      Only callable by accounts with the UPGRADER_ROLE.
      * @param newImplementation The address of the new implementation contract.
      */
-    function _authorizeUpgrade(
-        address newImplementation
-    ) internal override onlyRole(UPGRADER_ROLE) {}
+    function _authorizeUpgrade(address newImplementation) internal override onlyRole(UPGRADER_ROLE) {}
 }

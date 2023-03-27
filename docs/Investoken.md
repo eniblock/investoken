@@ -1,12 +1,12 @@
 # Investoken
 
+*Investoken*
 
+> Investoken
 
+Contract for token Investoken (IVTK)
 
-
-
-
-
+*This contract represents the Investoken, an ERC20-compatible token with additional features. This contract includes the following extensions: - Initializable: allows initialization of the contract state - ERC20Upgradeable: implements the ERC20 standard with upgradeability - ERC20BurnableUpgradeable: allows the burning of tokens - ERC20SnapshotUpgradeable: allows the creation of snapshots of the token&#39;s state - AccessControlEnumerableUpgradeable: allows for role-based access control with enumeration - PausableUpgradeable: allows the pausing and unpausing of the contract - ERC20PermitUpgradeable: allows for permit signatures for gasless transactions - UUPSUpgradeable: allows for upgradeable contracts using the Unstructured Proxy pattern*
 
 ## Methods
 
@@ -414,13 +414,13 @@ function initialize(address admin) external nonpayable
 
 
 
-
+*Initializes the contract with the given admin as the default admin and grants it all the roles.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| admin | address | undefined |
+| admin | address | The address of the admin. |
 
 ### mint
 
@@ -430,14 +430,14 @@ function mint(address to, uint256 amount) external nonpayable
 
 
 
-
+*Mints new tokens and sends them to the specified address.      Only callable by accounts with the MINTER_ROLE.*
 
 #### Parameters
 
 | Name | Type | Description |
 |---|---|---|
-| to | address | undefined |
-| amount | uint256 | undefined |
+| to | address | The address to send the new tokens to. |
+| amount | uint256 | The amount of tokens to mint. |
 
 ### name
 
@@ -486,7 +486,7 @@ function pause() external nonpayable
 
 
 
-
+*Pauses the token transfers and approvals.      This function can only be called by an address with the PAUSER_ROLE.*
 
 
 ### paused
@@ -587,7 +587,7 @@ function snapshot() external nonpayable
 
 
 
-
+*Creates a snapshot of the current token state, which can later be used for restoring the state.      This function can only be called by an address with the SNAPSHOT_ROLE.*
 
 
 ### supportsInterface
@@ -723,7 +723,7 @@ function unpause() external nonpayable
 
 
 
-
+*Unpauses the token transfers and approvals.      This function can only be called by an address with the PAUSER_ROLE.*
 
 
 ### upgradeTo
