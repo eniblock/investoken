@@ -428,7 +428,7 @@ function initialize(address admin) external nonpayable
 function mint(address to, uint256 amount) external nonpayable
 ```
 
-
+This function is used to mint new tokens and send them to the specified address
 
 *Mints new tokens and sends them to the specified address.      Only callable by accounts with the MINTER_ROLE.*
 
@@ -484,7 +484,7 @@ function nonces(address owner) external view returns (uint256)
 function pause() external nonpayable
 ```
 
-
+This function pauses the token transfers and approvals
 
 *Pauses the token transfers and approvals.      This function can only be called by an address with the PAUSER_ROLE.*
 
@@ -585,7 +585,7 @@ function revokeRole(bytes32 role, address account) external nonpayable
 function snapshot() external nonpayable
 ```
 
-
+This function creates a snapshot of the current token state
 
 *Creates a snapshot of the current token state, which can later be used for restoring the state.      This function can only be called by an address with the SNAPSHOT_ROLE.*
 
@@ -721,7 +721,7 @@ function transferFrom(address from, address to, uint256 amount) external nonpaya
 function unpause() external nonpayable
 ```
 
-
+This function unpauses the token transfers and approvals
 
 *Unpauses the token transfers and approvals.      This function can only be called by an address with the PAUSER_ROLE.*
 

@@ -70,6 +70,7 @@ contract Investoken is
     }
 
     /**
+     * @notice This function creates a snapshot of the current token state
      * @dev Creates a snapshot of the current token state, which can later be used for restoring the state.
      *      This function can only be called by an address with the SNAPSHOT_ROLE.
      */
@@ -78,6 +79,7 @@ contract Investoken is
     }
 
     /**
+     * @notice This function pauses the token transfers and approvals
      * @dev Pauses the token transfers and approvals.
      *      This function can only be called by an address with the PAUSER_ROLE.
      */
@@ -86,6 +88,7 @@ contract Investoken is
     }
 
     /**
+     * @notice This function unpauses the token transfers and approvals
      * @dev Unpauses the token transfers and approvals.
      *      This function can only be called by an address with the PAUSER_ROLE.
      */
@@ -94,6 +97,7 @@ contract Investoken is
     }
 
     /**
+     * @notice This function is used to mint new tokens and send them to the specified address
      * @dev Mints new tokens and sends them to the specified address.
      *      Only callable by accounts with the MINTER_ROLE.
      * @param to The address to send the new tokens to.
