@@ -6,6 +6,7 @@ import {task} from 'hardhat/config';
 import {HardhatUserConfig} from 'hardhat/types';
 import "@nomiclabs/hardhat-solhint";
 import "@openzeppelin/hardhat-upgrades";
+import "@nomiclabs/hardhat-etherscan";
 import 'dotenv/config';
 import * as dotenv from 'dotenv';
 dotenv.config();
@@ -42,7 +43,7 @@ export default <HardhatUserConfig>{
       default: 0,
       "mumbai": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5",
       "polygon": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5",
-      "goerli": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5"
+      "goerli": "0xBD685b882Cab5c11C7b11Fde420C1BDF249c588C"
     }
   },
   networks: {
@@ -58,31 +59,31 @@ export default <HardhatUserConfig>{
         },
     },
     mainnet: {
-        url: "https://mainnet.infura.io/v3/",
+        url: "https://mainnet.infura.io/v3/" + process.env.API_KEY,
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     goerli: {
-        url: "https://goerli.infura.io/v3/",
+        url: "https://goerli.infura.io/v3/" + process.env.API_KEY,
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     polygon: {
-        url: "https://polygon-rpc.com",
+        url: "https://polygon-rpc.com" + process.env.API_KEY,
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     mumbai: {
-        url: "https://rpc-mumbai.maticvigil.com",
+        url: "https://rpc-mumbai.maticvigil.com/",
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     matic: {
-        url: "https://rpc-mainnet.maticvigil.com/",
+        url: "https://rpc-mainnet.maticvigil.com/" + process.env.API_KEY,
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },

@@ -42,6 +42,8 @@
   "scripts": {
     "compile": "hardhat compile",
     "deploy": "hardhat deploy --network hardhat",
+    "deploy:goerli": "hardhat deploy --network goerli",
+    "deploy:mumbai": "hardhat deploy --network mumbai",
     "chain": "hardhat node --hostname 0.0.0.0 --network hardhat --no-deploy",
     "lint": "eslint '**/*.{js,ts}'",
     "format": "prettier 'contracts/*.sol' --check",
@@ -49,6 +51,7 @@
     "solhint": "solhint 'contracts/*.sol'",
     "test": "hardhat test --network hardhat",
     "coverage": "hardhat coverage",
-    "dodoc": "hardhat dodoc"
+    "dodoc": "hardhat dodoc",
+    "verify:goerli": "hardhat verify --network goerli 0x4E594d3f64B04F2c0b828Cd2fEC7e5307B6443b4"
   }
 }
