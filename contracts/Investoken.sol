@@ -70,6 +70,14 @@ contract Investoken is
     }
 
     /**
+     * @notice This function return the number of decimals of the contract
+     * @dev Returns the number of decimals used to get its user representation.
+     */
+    function decimals() public pure override returns (uint8) {
+        return 4;
+    }
+
+    /**
      * @notice This function creates a snapshot of the current token state
      * @dev Creates a snapshot of the current token state, which can later be used for restoring the state.
      *      This function can only be called by an address with the SNAPSHOT_ROLE.
