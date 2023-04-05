@@ -74,4 +74,4 @@ yarn dodoc
 This will generate documentation using Solidity Natural Docs.
 
 ## License
-The contracts are licensed under the MIT License.
+The project are licensed under the MIT License (more information in the LICENSE file)
