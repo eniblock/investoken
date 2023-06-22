@@ -44,6 +44,8 @@
     "deploy": "hardhat deploy --network hardhat",
     "deploy:goerli": "hardhat deploy --network goerli",
     "deploy:mumbai": "hardhat deploy --network mumbai",
+    "deploy:polygon": "hardhat deploy --network polygon",
+    "deploy:matic": "hardhat deploy --network matic",
     "chain": "hardhat node --hostname 0.0.0.0 --network hardhat --no-deploy",
     "lint": "eslint '**/*.{js,ts}'",
     "format": "prettier 'contracts/*.sol' --check",
@@ -52,6 +54,8 @@
     "test": "hardhat test --network hardhat",
     "coverage": "hardhat coverage",
     "dodoc": "hardhat dodoc",
-    "verify:goerli": "hardhat verify --network goerli 0x4E594d3f64B04F2c0b828Cd2fEC7e5307B6443b4"
+    "verify:goerli": "hardhat verify --network goerli 0x6e7747d69eE8ad5D53636e1fF69A73535063ff27",
+    "verify:mumbai": "hardhat verify --network mumbai 0xe8faeb18069FB2b226FB8Eda9EAFe46bf8F26b7B",
+    "verify:polygon": "hardhat verify --network polygon 0x4E594d3f64B04F2c0b828Cd2fEC7e5307B6443b4"
   }
 }

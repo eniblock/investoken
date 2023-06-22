@@ -42,8 +42,8 @@ export default <HardhatUserConfig>{
     admin: {
       default: 0,
       "mumbai": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5",
-      "polygon": "0xBA3839604E9F3a01a52a2FCaF4517250a3a656E5",
-      "goerli": "0xBD685b882Cab5c11C7b11Fde420C1BDF249c588C"
+      "polygon": "0xC53b24c83dCcD57eDe0ABaCb5867803eeC578b69",
+      "goerli": "0x156801C8dE84071A2e6F22f03f04BA81808665E9"
     }
   },
   networks: {
@@ -71,13 +71,13 @@ export default <HardhatUserConfig>{
         },
     },
     polygon: {
-        url: "https://polygon-rpc.com" + process.env.API_KEY,
+        url: "https://polygon-rpc.com/",
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
     },
     mumbai: {
-        url: "https://rpc-mumbai.maticvigil.com/",
+        url: "https://polygon-mumbai.g.alchemy.com/v2/"  + process.env.MUMBAI_API_KEY,
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
@@ -105,9 +105,36 @@ paths: {
   },
   etherscan: {
     apiKey: {
-      polygonMumbai: process.env.ETHERSCAN_API_KEY as string,
-      polygon: process.env.ETHERSCAN_API_KEY as string,
+      polygonMumbai: process.env.POLYGONSCAN_API_KEY as string,
+      polygon: process.env.POLYGONSCAN_API_KEY as string,
+      matic: process.env.POLYGONSCAN_API_KEY as string,
       goerli: process.env.ETHERSCAN_API_KEY as string,
-    }
+    },
+    customChains: [
+      {
+        network: "polygonMumbai",
+        chainId: 80001,
+        urls: {
+          apiURL: "https://api-testnet.polygonscan.com/api",
+          browserURL: "https://mumbai.polygonscan.com"
+        }
+      },
+      {
+        network: "polygon",
+        chainId: 137,
+        urls: {
+          apiURL: "https://api.polygonscan.com/",
+          browserURL: "https://polygonscan.com"
+        }
+      },
+      {
+        network: "matic",
+        chainId: 137,
+        urls: {
+          apiURL: "https://polygonscan.com/api",
+          browserURL: "https://polygonscan.com"
+        }
+      }
+    ]
   },
 }

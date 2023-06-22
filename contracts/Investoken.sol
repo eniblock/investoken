@@ -40,6 +40,78 @@ contract Investoken is
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
+    bytes32 public constant TERMS_ROLE = keccak256("TERMS_ROLE");
+
+    string public _a_Emetteur_du_token;
+    string public _b_Descriptif_du_token;
+    string public _c_Le_club_Investoken;
+    string public _d_Processus_d_acquisition_des_biens;
+    string public _e_Gestion_des_actifs;
+    string public _f_Valeur_d_emission;
+    string public _g_Emission_primaire_du_token;
+    string public _h_Adhesion;
+    string public _i_Niveau_d_adhesion;
+    string public _j_Disponibilite;
+    string public _k_Transfert_de_token;
+    string public _l_Echanges;
+    string public _m_Garantie;
+    string public _n_Critere_du_cyberjeton;
+
+    function setA_Emetteur_du_token(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _a_Emetteur_du_token = textutf8;
+    }
+
+    function setB_Descriptif_du_token(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _b_Descriptif_du_token = textutf8;
+    }
+
+    function setC_Le_club_Investoken(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _c_Le_club_Investoken = textutf8;
+    }
+
+    function setD_Processus_d_acquisition_des_biens(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _d_Processus_d_acquisition_des_biens = textutf8;
+    }
+
+    function setE_Gestion_des_actifs(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _e_Gestion_des_actifs = textutf8;
+    }
+
+    function setF_Valeur_d_emission(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _f_Valeur_d_emission = textutf8;
+    }
+
+    function setG_Emission_primaire_du_token(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _g_Emission_primaire_du_token = textutf8;
+    }
+
+    function setH_Adhesion(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _h_Adhesion = textutf8;
+    }
+
+    function setI_Niveau_d_adhesion(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _i_Niveau_d_adhesion = textutf8;
+    }
+
+    function setJ_Disponibilite(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _j_Disponibilite = textutf8;
+    }
+
+    function setK_Transfert_de_token(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _k_Transfert_de_token = textutf8;
+    }
+
+    function setL_Echanges(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _l_Echanges = textutf8;
+    }
+
+    function setM_Garantie(string memory textutf8) external onlyRole(TERMS_ROLE) {
+       _m_Garantie = textutf8;
+    }
+
+    function setN_Critere_du_cyberjeton(string memory textutf8) external onlyRole(TERMS_ROLE) {
+        _n_Critere_du_cyberjeton = textutf8;
+    }
 
     /**
      * @dev Constructor function that disables initializers.
@@ -67,6 +139,7 @@ contract Investoken is
         _grantRole(PAUSER_ROLE, admin);
         _grantRole(MINTER_ROLE, admin);
         _grantRole(UPGRADER_ROLE, admin);
+        _grantRole(TERMS_ROLE, admin);
     }
 
     /**
@@ -143,4 +216,5 @@ contract Investoken is
      * @param newImplementation The address of the new implementation contract.
      */
     function _authorizeUpgrade(address newImplementation) internal override onlyRole(UPGRADER_ROLE) {}
+
 }

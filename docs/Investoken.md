@@ -95,6 +95,23 @@ function SNAPSHOT_ROLE() external view returns (bytes32)
 |---|---|---|
 | _0 | bytes32 | undefined |
 
+### TERMS_ROLE
+
+```solidity
+function TERMS_ROLE() external view returns (bytes32)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | bytes32 | undefined |
+
 ### UPGRADER_ROLE
 
 ```solidity
@@ -111,6 +128,244 @@ function UPGRADER_ROLE() external view returns (bytes32)
 | Name | Type | Description |
 |---|---|---|
 | _0 | bytes32 | undefined |
+
+### _a_Emetteur_du_token
+
+```solidity
+function _a_Emetteur_du_token() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _b_Descriptif_du_token
+
+```solidity
+function _b_Descriptif_du_token() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _c_Le_club_Investoken
+
+```solidity
+function _c_Le_club_Investoken() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _d_Processus_d_acquisition_des_biens
+
+```solidity
+function _d_Processus_d_acquisition_des_biens() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _e_Gestion_des_actifs
+
+```solidity
+function _e_Gestion_des_actifs() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _f_Valeur_d_emission
+
+```solidity
+function _f_Valeur_d_emission() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _g_Emission_primaire_du_token
+
+```solidity
+function _g_Emission_primaire_du_token() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _h_Adhesion
+
+```solidity
+function _h_Adhesion() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _i_Niveau_d_adhesion
+
+```solidity
+function _i_Niveau_d_adhesion() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _j_Disponibilite
+
+```solidity
+function _j_Disponibilite() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _k_Transfert_de_token
+
+```solidity
+function _k_Transfert_de_token() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _l_Echanges
+
+```solidity
+function _l_Echanges() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _m_Garantie
+
+```solidity
+function _m_Garantie() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
+
+### _n_Critere_du_cyberjeton
+
+```solidity
+function _n_Critere_du_cyberjeton() external view returns (string)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | string | undefined |
 
 ### allowance
 
@@ -578,6 +833,230 @@ function revokeRole(bytes32 role, address account) external nonpayable
 |---|---|---|
 | role | bytes32 | undefined |
 | account | address | undefined |
+
+### setA_Emetteur_du_token
+
+```solidity
+function setA_Emetteur_du_token(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setB_Descriptif_du_token
+
+```solidity
+function setB_Descriptif_du_token(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setC_Le_club_Investoken
+
+```solidity
+function setC_Le_club_Investoken(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setD_Processus_d_acquisition_des_biens
+
+```solidity
+function setD_Processus_d_acquisition_des_biens(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setE_Gestion_des_actifs
+
+```solidity
+function setE_Gestion_des_actifs(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setF_Valeur_d_emission
+
+```solidity
+function setF_Valeur_d_emission(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setG_Emission_primaire_du_token
+
+```solidity
+function setG_Emission_primaire_du_token(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setH_Adhesion
+
+```solidity
+function setH_Adhesion(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setI_Niveau_d_adhesion
+
+```solidity
+function setI_Niveau_d_adhesion(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setJ_Disponibilite
+
+```solidity
+function setJ_Disponibilite(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setK_Transfert_de_token
+
+```solidity
+function setK_Transfert_de_token(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setL_Echanges
+
+```solidity
+function setL_Echanges(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setM_Garantie
+
+```solidity
+function setM_Garantie(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
+
+### setN_Critere_du_cyberjeton
+
+```solidity
+function setN_Critere_du_cyberjeton(string textutf8) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| textutf8 | string | undefined |
 
 ### snapshot
 

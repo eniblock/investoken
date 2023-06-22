@@ -34,7 +34,7 @@ This will compile the contracts using Hardhat.
 
 To deploy the contracts to a network, run the following command:
 ```
-yarn deploy --network [network name]
+yarn deploy:[network name]
 ```
 
 Replace [network name] with the name of the network you want to deploy to (e.g. goerli, mainnet, polygon, mumbai etc.).
