@@ -71,7 +71,7 @@ export default <HardhatUserConfig>{
         },
     },
     polygon: {
-        url: "https://polygon-rpc.com/",
+        url: "https://polygon-mainnet.g.alchemy.com/v2/" + process.env.MUMBAI_API_KEY,
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
@@ -83,7 +83,7 @@ export default <HardhatUserConfig>{
         },
     },
     matic: {
-        url: "https://rpc-mainnet.maticvigil.com/" + process.env.API_KEY,
+        url: "https://polygon-mumbai.g.alchemy.com/v2/" + process.env.MUMBAI_API_KEY,
         accounts: {
           mnemonic: process.env.MNEMONIC ?? default_mnemonic,
         },
@@ -107,34 +107,7 @@ paths: {
     apiKey: {
       polygonMumbai: process.env.POLYGONSCAN_API_KEY as string,
       polygon: process.env.POLYGONSCAN_API_KEY as string,
-      matic: process.env.POLYGONSCAN_API_KEY as string,
       goerli: process.env.ETHERSCAN_API_KEY as string,
     },
-    customChains: [
-      {
-        network: "polygonMumbai",
-        chainId: 80001,
-        urls: {
-          apiURL: "https://api-testnet.polygonscan.com/api",
-          browserURL: "https://mumbai.polygonscan.com"
-        }
-      },
-      {
-        network: "polygon",
-        chainId: 137,
-        urls: {
-          apiURL: "https://api.polygonscan.com/",
-          browserURL: "https://polygonscan.com"
-        }
-      },
-      {
-        network: "matic",
-        chainId: 137,
-        urls: {
-          apiURL: "https://polygonscan.com/api",
-          browserURL: "https://polygonscan.com"
-        }
-      }
-    ]
   },
 }
